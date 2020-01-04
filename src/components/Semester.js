@@ -80,10 +80,10 @@ export default class Semester extends Component {
                                 <div className="flex-grow-1 px-3">
                                     <div className="d-flex justify-content-between">
                                         <h6 className="mb-0">{node.title}</h6>
-                                        <h6 className="mb-0 text-success ml-5">Sem {node.semester}</h6>
+                                        <h6 className="mb-0 text-success ml-5">{node.year}</h6>
                                     </div>
                                     <p className="text-muted">
-                                        <small>{node.year}</small>
+                                        <small>Sem {node.semester}</small>
                                     </p>
                                     <a href={node.file.localFile.publicURL} download>
                                       <button className="btn btn-success">
