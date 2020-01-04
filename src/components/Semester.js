@@ -9,7 +9,7 @@ const getCaty = items=>{
     })
     let holdSemesters = new Set(holdItems)
     let semesters = Array.from(holdSemesters)
-    semesters = ["all", ...semesters]
+    semesters = ["All", ...semesters]
     return semesters
 
 }

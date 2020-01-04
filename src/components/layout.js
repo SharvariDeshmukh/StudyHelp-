@@ -36,10 +36,10 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
+        <footer className="footer">
+          © {new Date().getFullYear()},Designed by  
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a target="_blank" href="https://linkedin.com/in/sharvari-deshmukh-27136b169">Sharvari Deshmukh</a>
         </footer>
       </div>
     </>
