@@ -43,9 +43,15 @@ export default class Semester extends Component {
         return (
             <section className="py-5">
                 <div classname="container">
-                    
+                  <div className="bg-theme">  
                     <div className="row my-3">
                         <div className="col-10 mx-auto text-center">
+                        <div className="row">
+                        <div className="col text-center mb-4">
+                            <h4 className="display-4 text-white">Select Semester</h4>
+                            
+                        </div>  
+                    </div>
                             {this.state.mysemester.map((semester, index)=>{
                                 return (<button
                                             type="button"
@@ -55,13 +61,14 @@ export default class Semester extends Component {
                                                 this.catyClicked(semester)
                                             }}
                                         >
-                                        {semester}
+                                        {semester} Semester
                                         
                                         
                                         </button>)
                             })}
                         </div>
                     </div>
+                </div>    
                     <div className="row">
                     {this.state.mypapers.map(({node})=>{
                         return(
