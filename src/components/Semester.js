@@ -26,7 +26,7 @@ export default class Semester extends Component {
     catyClicked = semester=>{
         let keepitsafe = [...this.state.papers]
 
-        if(semester == 'all'){
+        if(semester == 'All'){
             this.setState(()=>{
                 return{mypapers: keepitsafe}
             })
@@ -85,7 +85,7 @@ export default class Semester extends Component {
                                     <p className="text-muted">
                                         <small>Sem {node.semester}</small>
                                     </p>
-                                    <a href={node.file.localFile.publicURL} download>
+                                    <a href={node.file.localFile.publicURL} view>
                                       <button className="btn btn-success">
                                         download
                                       </button>
