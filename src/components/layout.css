@@ -4,5 +4,14 @@ width : 50px;
 
 }
 .bg-theme{
-    background-color: #180629;
+    background-color: #0a4214;
 }
+
+
+.hero-background{
+    min-height:100vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction : column;
+  }
