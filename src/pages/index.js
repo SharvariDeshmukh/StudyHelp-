@@ -28,7 +28,7 @@ export const query = graphql`
 {   
     img: file(relativePath: { eq: "Hero.png" }) {
       childImageSharp {
-        fluid(maxWidth: 400, maxHeight: 250) {
+        fluid(maxWidth: 1000, maxHeight: 650) {
         ...GatsbyImageSharpFluid_tracedSVG
         }
       }

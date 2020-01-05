@@ -9,7 +9,7 @@ width : 50px;
 
 
 .hero-background{
-    min-height:100vh;
+    min-height:30vh;
     justify-content: center;
     display: flex;
     align-items: center;
