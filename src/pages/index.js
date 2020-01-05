@@ -26,7 +26,7 @@ const IndexPage = ({data}) => (
 
 export const query = graphql`
 {   
-    img: file(relativePath: { eq: "hero.png" }) {
+    img: file(relativePath: { eq: "Hero.png" }) {
       childImageSharp {
         fluid(maxWidth: 400, maxHeight: 250) {
         ...GatsbyImageSharpFluid_tracedSVG
