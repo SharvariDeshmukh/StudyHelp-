@@ -9,20 +9,29 @@ const getCaty = items=>{
     })
     let holdSemesters = new Set(holdItems)
     let semesters = Array.from(holdSemesters)
+    semesters.sort();
     semesters = ["All", ...semesters]
     return semesters
 
 }
 export default class Semester extends Component {
+    URL = "http://docs.google.com/viewer?url=https://studyhelp.netlify.com";
     constructor(props){
         super(props)
         this.state={
             papers : props.papers.edges,
             mypapers : props.papers.edges,
-            mysemester : getCaty(props.papers.edges)
+            mysemester : getCaty(props.papers.edges),
+            showMessage: false 
 
         }
     }
+    
+  _showMessage = (bool) => {
+    this.setState({
+      showMessage: bool
+    });
+  }
     catyClicked = semester=>{
         let keepitsafe = [...this.state.papers]
 
@@ -61,15 +70,14 @@ export default class Semester extends Component {
                                                 this.catyClicked(semester)
                                             }}
                                         >
-                                        {semester} Semester
-                                        
-                                        
+                                            {semester} Semester
                                         </button>)
                             })}
                         </div>
                     </div>
                 </div>    
                     <div className="row">
+                    {this._showMessage.bind(null, false)}
                     {this.state.mypapers.map(({node})=>{
                         return(
                             <div
@@ -85,18 +93,19 @@ export default class Semester extends Component {
                                     <p className="text-muted">
                                         <small>Sem {node.semester}</small>
                                     </p>
-                                    <a href={node.file.localFile.publicURL} view>
-                                      <button className="btn btn-success">
+                                    <a href={node.file.localFile.publicURL} download >
+                                     <button className="btn btn-success" disabled>
                                         download
                                       </button>
                                     </a>
-                                  
-                                  
-                                  <button className="mr-2 btn btn-warning"  disabled>
-                                      view
-                                  </button>
-      
-                                  
+                                    <div className="invisible">
+                                   {URL="http://docs.google.com/viewer?url=https://studyhelp.netlify.com" + node.file.localFile.publicURL}
+                                   </div>
+                                   <a href={URL}>
+                                    <button type= "submit" className="mr-2 btn btn-warning">
+                                        view  
+                                    </button>   
+                                    </a>                                                                              
                                 </div>
                             </div>
                         )
