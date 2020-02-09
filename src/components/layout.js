@@ -40,6 +40,9 @@ const Layout = ({ children }) => {
           © {new Date().getFullYear()},Designed by  
           {` `}
           <a target="_blank" href="https://linkedin.com/in/sharvari-deshmukh-27136b169">Sharvari Deshmukh</a>
+{` `}
+          <a target="_blank" href="https://forms.gle/Pgu94HwDsDX845FA6">Contact Us</a>
+
         </footer>
       </div>
     </>
