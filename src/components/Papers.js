@@ -48,7 +48,7 @@ export default class Papers extends Component {
                               </a>
                             
                             
-                            <button className="mr-2 btn btn-warning" onClick={this.viewPage(node.file.localFile.publicURL)} disabled>
+                            <button className="mr-2 btn btn-warning" onClick={this.viewPage(node.file.localFile.publicURL)} >
                                 view
                             </button>
 
